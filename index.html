@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Ruiheng Su</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/landing-page.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet"
+        type="text/css">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css"
+        integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg=="
+        crossorigin="anonymous">
+
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-196322392-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'UA-196322392-1');
+    </script>
+
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+
+    <!-- <style>
+        .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 6em;
+            text-align: left;
+            opacity: 1;
+            transition: opacity 0.5s;
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+    </style> -->
+</head>
+
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const scrollDown = document.querySelector(".scroll-down");
+
+            // Function to hide scroll-down hint
+            function hideScrollDownHint() {
+                scrollDown.style.display = "none";
+                // Optionally, you may want to save a flag to localStorage to remember the user's preference.
+                // localStorage.setItem("hideScrollHint", true);
+            }
+
+            // Check if the user has previously hidden the hint
+            // const userPrefersHidden = localStorage.getItem("hideScrollHint");
+
+            // If the user hasn't hidden the hint, listen for scroll events
+            // if (!userPrefersHidden) {
+            window.addEventListener("scroll", function () {
+                if (window.scrollY > 0) {
+                    hideScrollDownHint();
+                    // Uncomment the line below if you want to remember the user's preference across sessions.
+                    // localStorage.setItem("hideScrollHint", true);
+                }
+            });
+            // }
+        });
+    </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var lastScrollTop = 0;
+            var navbar = $('.navbar');
+
+            $(window).scroll(function (event) {
+                var st = $(this).scrollTop();
+                if (st > lastScrollTop && st > 50) {
+                    // Scroll down, show navbar
+                    navbar.fadeIn();
+                }
+                else {
+                    // Scroll up, hide navbar
+                    navbar.fadeOut();
+                }
+                lastScrollTop = st;
+            });
+        });
+
+        $(document).ready(function () {
+            var overlayText = $('#overlayText');
+            var isFadingOut = false;
+
+            $(window).scroll(function () {
+                var scrollPosition = $(this).scrollTop();
+
+                // Adjust the offset as needed
+                var fadeOutStart = 30;
+                var fadeOutEnd = 50;
+
+                if (scrollPosition >= fadeOutStart && scrollPosition <= fadeOutEnd) {
+                    var opacity = 1 - (scrollPosition - fadeOutStart) / (fadeOutEnd - fadeOutStart);
+                    overlayText.css('opacity', opacity);
+                    isFadingOut = true;
+                } else if (scrollPosition < fadeOutStart) {
+                    overlayText.css('opacity', 1);
+                    isFadingOut = false;
+                }
+
+                if (isFadingOut && scrollPosition > fadeOutEnd) {
+                    overlayText.addClass('fade-out');
+                } else {
+                    overlayText.removeClass('fade-out');
+                }
+            });
+        });
+    </script> -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" id="Name" href="">Ruiheng Su</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- <li>
+                        <a href="#Home">Home</a>
+                    </li> -->
+                    <li>
+                        <a href="RS_CV.pdf">Curriculum Vitae</a>
+                    </li>
+                    <div class="navbar-brand social">
+                        <a href="mailto:%72%75%69%68%65%6E%67%73%75@%67%6D%61%69%6C.%63%6F%6D" title="email"><i
+                                class="fas fa-envelope"></i></a>
+                        <a href="https://scholar.google.com/citations?user=Z9fIlLcAAAAJ" title="Google Scholar"
+                            target="_blank" rel="noopener noreferrer"><i class="ai ai-google-scholar"></i></a>
+                        <a href="https://github.com/sillyPhotons" title="GitHub" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/ruiheng-su-11973b202" title="LinkedIn" target="_blank"
+                            rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Header -->
+    <a name="Home"></a>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+        </ol>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src="img/covers/supercon.png" alt="1" width="1200" height="700">
+                <div class="carousel-caption">
+                    <h3>Superconductivity in twisted 2+2 graphene</h3>
+                    <p class="lead">Fraunhofer oscillations of critical current in a magnetic field</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/covers/oscillations.png" alt="3" width="1200" height="700">
+                <div class="carousel-caption">
+                    <h3>Fermiology of multilayer graphene</h3>
+                    <p class="lead">Quantum oscillations of resistivity measured in a graphene device</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/covers/dilution.jpg" alt="4" width="1200" height="700" object-fit: cover;>
+                <div class="carousel-caption">
+                    <h3>Probing quantum ground states</h3>
+                    <p class="lead">Quantum Transport at millikelvin temperatures</p>
+                </div>
+            </div>
+            <div class="item ">
+                <img src="img/covers/chern.png" alt="2" width="1200" height="700">
+                <div class="carousel-caption">
+                    <h3>Magnetic topological states in twisted multilayer graphene</h3>
+                    <p class="lead">Landau fan diagram of resistivity</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/covers/tdbg.jpeg" alt="5" width="1200" height="700">
+                <div class="carousel-caption">
+                    <h3>Designing materials for correlated electronic phases</h3>
+                    <p class="lead">A twisted double bilayer graphene device</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="img/covers/gaas_dots.jpg" alt="6" width="1200" height="700">
+                <div class="carousel-caption">
+                    <h3>Lateral quantum dots</h3>
+                    <p class="lead">Defined on a GaAs/AlGaAs heterostructure</p>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="overlay-text" id="overlayText">Ruiheng Su</div> -->
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div class="scroll-down">
+        <div class="chevron"></div>
+    </div>
+    <!-- Page Content -->
+
+    <a name="About Me"></a>
+    <div class="content-section-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-4">
+                    <img class="img-responsive z-depth-1  rounded-circle" src="img/profile.jpg" alt="" width="230"
+                        height="230">
+                    <!-- <figcaption>Photo Credits: Jingda Wu</figcaption> -->
+                </div>
+
+                <div class="col-lg-9 col-md-8 col-sm-8">
+                    <!-- <div class="col-md-6 col-md-offset-0 col-sm-push-6 col-sm-6"> -->
+                    <!-- <div class="col-md-6 col-md-offset-0 col-sm-push-6 col-sm-6"> -->
+                    <div class="clearfix"></div>
+                    <h3 class="section-heading">Ruiheng Su</h3>
+                    <p class="lead">
+                        I am a senior engineering physics undergraduate at the University of British Columbia,
+                        Vancouver, Canada. My current research explores electronic phases in multilayer graphene through charge transport experiments.
+                    </p>
+                    <p class="lead">I am actively seeking graduate student positions where I hope to exploring strongly
+                        correlated quantum materials using novel transport and/or spectroscopic probes.☕</p>
+                </div>
+                <!-- <div class="col-lg-4 col-sm-pull-5  col-sm-5"> -->
+                <!-- <div class="col-md-4 col-sm-pull-6 col-sm-6"> -->
+            </div>
+        </div>
+        <!-- /.container -->
+    </div>
+    </div>
+
+    <a name="Research"></a>
+    <div class="content-section-a">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-sm-6">
+                    <div class="clearfix"></div>
+                    <h3 class="section-heading">Twisted multilayer graphene</h3>
+                    <p class="lead"> 
+                        Ability assemble two-dimensional materials atomic layer-by-layer present unprecedented opportunites to engineer fasinating electronic states, and build devices where local electrostatic gates can be used to tune the ground states of the material. 
+                    </p>
+                    <p class="lead">
+                        I've so far focused on multilayer graphene often with a single "twist" - where an rotational misalignment between two layers generates a long wavelength superlattice. This forms the family of twisted <i>N</i>-layer + <i>M</i>-layer graphene. 
+                    </p>
+                </div>
+                <div class="col-lg-6 col-sm-6">
+                    <img class="img-responsive" src="img/tdbg.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-6 col-lg-offset-0 col-sm-push-6  col-sm-6">
+                    <div class="clearfix"></div>
+                    <h3 class="section-heading">Superconductivity in twisted double bilayer graphene on WSe<sub>2</sub>
+                    </h3>
+                    <p class="lead">
+                        In a superconductor, electrons conspire to form a macroscopic quantum ground state, where charge/current can flow without dissipation.
+                    </p>
+                    <p class="lead">In this work, we discovered that stacking twisted double bilayer graphene (t2+2) on few-layer WSe<sub>2</sub> stabilizes superconductivity in this material. Our findings highlight the remarkable impact of proximal substrate interfaces and the moiré potential in establishing new ground states in van der Waals heterostructures. They add to the growing body of evidence in graphitic systems suggesting a correlation—but not overlap—between electronic states with a tendency toward isospin polarization and those conducive to superconductivity. 
+                    </p>
+
+                    <a href="https://doi.org/10.1038/s41563-023-01653-7">Nature Materials 22, 1332-1337 (2023)</a>
+                </div>
+                <div class="col-lg-6 col-sm-pull-6  col-sm-6">
+                    <img class="img-responsive" src="img/sc.png" alt="">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-lg-push-5 col-sm-6 col-sm-push-6">
+                    <div class="clearfix"></div>
+                    <h3 class="section-heading">Recyling robot @ home</h3>
+                    <p class="lead">This is an robot I assembed for a competition to
+                        retrieve and deposit the most scattered soda cans in a competition arena into a recyling bin within 1 minute.
+                        Transitioning to online learning during this time meant parts of the robot had to be
+                        constructed/soldered by hand.</p>
+                    <p class="lead">I put together an IR detection circuit for line following, H-bridge circuit for
+                        motor control, and programmed a microcontroller in C<sup>++</sup> to use a sonar module for soda
+                        can detection. This is a video of a robot iteration in action!</p>
+                </div>
+                <div class="col-lg-5 col-lg-pull-7 col-sm-6 col-sm-pull-6">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item"
+                            src="https://www.youtube.com/embed/tuM4HwyycY8?si=H3FXWGQ6aD2bzpMZ"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+    </div>
+
+    <div class="content-section-b">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-sm-6">
+                    <div class="clearfix"></div>
+                    <h3 class="section-heading">Machined phone holder</h3>
+                    <p class="lead">I machined this foldable phone holder from brass and aluminum scraps. Unlike typical
+                        plastic holders, it's heavy (a "feature"), built to last, and big enough to hold a tablet.</p>
+
+                    <p class="lead">This was a project to become a qualified user of <a
+                            href="https://sms-course.phas.ubc.ca/">UBC's student machine shop</a>. It involved using the
+                        mill, lathe, drill press, water jet, as well as hand tools such as the tap and die.</p>
+                </div>
+
+                <div class="col-lg-4 col-sm-6">
+                    <img class="img-responsive" src="img/phone_holder.png" alt="" width="300" height="300">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="content-section-a">
+
+        <div class="container">
+            
+            <div class="row" style="margin-top: 1.5rem;">
+                <div class="col-lg-12">
+                    
+
+                    <div class="table-responsive">
+                        <table class="table table-sm table-borderless" style="font-weight: 400;">
+                            <tr>
+                                <th scope="row">Sep 29, 2023</th>
+                                <td>
+                                    I won first prize in the poster session at SBQMI’s International Scientific Advisory
+                                    Board meeting (check it out <a href="img/poster_ISAB2023.png">here</a>)!
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Aug 28, 2023</th>
+                                <td>
+                                    Exciting news! Our paper on superconductivity in twisted double bilayer graphene was
+                                    recently published in Nature Materials :)
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">May 12, 2023</th>
+                                <td>
+                                    I attended the <a href="https://cifar.ca/research-programs/quantum-materials/"
+                                        target="_blank" rel="noopener noreferrer">CIFAR Quantum Materials</a> spring
+                                    school in Montreal, where I learned from graduate students about their research and
+                                    received valuable feedback on my poster on electronic phases of twisted double
+                                    bilayer graphene on WSe<sub>2</sub> (check it out <a
+                                        href="img/poster_CIFAR2023.png">here</a>).
+
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+    </div>
+
+    <!-- <a  name="contact"></a> -->
+    <div class="banner">
+        <div class="container">
+
+            <div class="row">
+                <!-- <div class="col-lg-1 col-sm-2 hidden-xs bottombanner">
+                    <img class="img-responsive" src="img/.png" alt="">
+                </div> -->
+                <!-- <div class="col-lg-2 col-sm-3 bottombanner">
+                    <span class="bannerh3"><h3>External Links:</h3></span>
+                </div> -->
+                <!-- <div class="col-lg-6 bottombanner">
+                    <ul class="list-inline banner-social-buttons">
+                        <li>
+                            <a href="http://kim.physics.harvard.edu" class="btn btn-default btn-sm"><span class="network-name">Kim Group</span></a>
+                        </li>
+                        <li>
+                            <a href="http://fab.cba.mit.edu/classes/863.16/section.Harvard/people/Liu/index.html" class="btn btn-default btn-sm"><span class="network-name">How to make</span></a>
+                        </li>
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=fUyhrTIAAAAJ&amp;hl=en" class="btn btn-default btn-sm"><span class="network-name">Google scholar</span></a>
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
