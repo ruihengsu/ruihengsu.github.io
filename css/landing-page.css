@@ -181,24 +181,25 @@ footer {
 .carousel-inner img {
       width: 100%; /* Set width to 100% */
       margin: auto;
-  }
-  .carousel-caption h3 {
-      color: #fff !important;
-  }
-  @media (max-width: 600px) {
-    .carousel-caption {
-      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-    .banner h3 {
-        margin: 0;
-        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-        font-size: 24pt;
-    }
+}
+.carousel-caption h3 {
+    color: #fff !important;
+}
 
-    .network-name{
-        font-size: 12pt;
-    }
-  }
+@media (max-width: 600px) {
+.carousel-caption {
+    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+}
+.banner h3 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+    font-size: 24pt;
+}
+
+.network-name{
+    font-size: 12pt;
+}
+}
 
 p.copyright {
     margin: 15px 0 0;
