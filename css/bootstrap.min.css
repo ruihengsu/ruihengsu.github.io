@@ -3020,7 +3020,7 @@ th {
 .table>tfoot>tr>th,
 .table>thead>tr>td,
 .table>thead>tr>th {
-    padding: 8px;
+    /* padding: 8px; */
     line-height: 1.42857143;
     vertical-align: top;
     border-top: 0px solid #ddd
@@ -3235,7 +3235,7 @@ table th[class*=col-] {
     .table-responsive>.table>tfoot>tr>th,
     .table-responsive>.table>thead>tr>td,
     .table-responsive>.table>thead>tr>th {
-        white-space: nowrap
+        /* white-space: nowrap */
     }
 
     .table-responsive>.table-bordered {
