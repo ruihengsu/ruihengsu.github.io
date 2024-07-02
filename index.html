@@ -64,28 +64,6 @@
 </head>
 
 <body>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const scrollDown = document.querySelector(".scroll-down");
-
-            // Function to hide scroll-down hint
-            function hideScrollDownHint() {
-                scrollDown.style.display = "none";
-                // Optionally, you may want to save a flag to localStorage to remember the user's preference.
-                // localStorage.setItem("hideScrollHint", true);
-            }
-
-            window.addEventListener("scroll", function () {
-                if (window.scrollY > 0) {
-                    hideScrollDownHint();
-                    // Uncomment the line below if you want to remember the user's preference across sessions.
-                    // localStorage.setItem("hideScrollHint", true);
-                }
-            });
-            // }
-        });
-    </script>
-
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
         <div class="container topnav">
@@ -98,7 +76,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand topnav" id="Name" href="">Ruiheng Su</a>
+                <a class="navbar-brand topnav" id="Name" href="index.html">Ruiheng Su</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -107,7 +85,8 @@
                         <a href="#Home">Home</a>
                     </li> -->
                     <li>
-                        <a href="pdf/RS_CV.pdf" target="_blank" rel="noopener">Curriculum Vitae</a>
+                        <!-- <a href="cv.html">Curriculum Vitae</a> -->
+                        <a href="pdf/RS_CV.pdf">Curriculum Vitae</a>
                     </li>
                     <div class="navbar-brand social">
                         <a href="mailto:%72%75%69%68%65%6E%67%73%75@%67%6D%61%69%6C.%63%6F%6D" title="email"><i
@@ -161,8 +140,8 @@
             <div class="item ">
                 <img src="img/covers/LL_fan.png" alt="3" width="1200" height="700">
                 <div class="carousel-caption">
-                    <h3>Topological states in graphene</h3>
-                    <p class="lead">Recursive energy spectra of electrons in a strong magnetic field</p>
+                    <h3 style="color: black !important">Topological states in graphene</h3>
+                    <p class="lead black-text">Recursive energy spectra of electrons in a strong magnetic field</p>
                 </div>
             </div>
             <div class="item">
@@ -198,9 +177,7 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-    <div class="scroll-down">
-        <div class="chevron"></div>
-    </div>
+
     <!-- Page Content -->
 
     <a name="About Me"></a>
@@ -217,18 +194,20 @@
                     <!-- <div class="col-md-6 col-md-offset-0 col-sm-push-6 col-sm-6"> -->
                     <!-- <div class="col-md-6 col-md-offset-0 col-sm-push-6 col-sm-6"> -->
                     <div class="clearfix"></div>
-                    <h3 class="section-heading">Ruiheng Su</h3>
+                    <h3 class="section-heading">Ruiheng Su (苏锐恒)</h3>
                     <p class="lead">
-                        Hello there! I am an incoming quantum science and engineering Ph.D. student at Princeton University. 
+                        Hello there! I am an incoming quantum science and engineering Ph.D. student at Princeton
+                        University.
                     </p>
-                    <p class="lead">I graduated from the University of British Columbia in 2024, where I spent 3 years in Professor Joshua Folk's Quantum Devices Group. With Prof. Folk, I explored the emergent electronic properties in 2D quantum materials through charge transport experiments. ☕</p>
+                    <p class="lead">I graduated from the University of British Columbia in 2024, where I spent 3 years
+                        in Professor Joshua Folk's Quantum Devices Group. With Prof. Folk, I explored the emergent
+                        electronic properties in 2D quantum materials through charge transport experiments. ☕</p>
                 </div>
                 <!-- <div class="col-lg-4 col-sm-pull-5  col-sm-5"> -->
                 <!-- <div class="col-md-4 col-sm-pull-6 col-sm-6"> -->
             </div>
         </div>
         <!-- /.container -->
-    </div>
     </div>
 
     <a name="Research"></a>
@@ -244,7 +223,8 @@
                     </p>
                     <p class="lead">
                         My research has focused on multilayer graphene, often incorporating rotational
-                        misalignment between the crystal lattice of neighboring atomic layers. This introduces a new length scale in
+                        misalignment between the crystal lattice of neighboring atomic layers. This introduces a new
+                        length scale in
                         the system - that of the moir&eacute; pattern. The family of such materials is known as twisted
                         <i>M</i>-layer + <i>N</i>-layer graphene. An exemplary example is t2+2, also known as twisted
                         double bilayer graphene.
@@ -262,14 +242,24 @@
             <div class="row">
                 <div class="col-lg-6 col-lg-offset-0 col-sm-push-6  col-sm-6">
                     <div class="clearfix"></div>
-                    <h3 class="section-heading"> Generalized anomalous Hall crystal in twisted bilayer-trilayer graphene</h3>
+                    <h3 class="section-heading"> Generalized anomalous Hall crystal in twisted bilayer-trilayer graphene
+                    </h3>
                     <p class="lead">
-                        In a dilute two-dimensional electron gas, Coulomb interactions can stabilize the formation of a Wigner crystal. Although Wigner crystals are topologically trivial, it has been predicted that electrons in a partially filled band can break continuous translational symmetry and time-reversal symmetry spontaneously to form an anomalous Hall crystal (AHC).
+                        In a dilute two-dimensional electron gas, Coulomb interactions can stabilize the formation of a
+                        Wigner crystal. Although Wigner crystals are topologically trivial, it has been predicted that
+                        electrons in a partially filled band can break continuous translational symmetry and
+                        time-reversal symmetry spontaneously to form an anomalous Hall crystal (AHC).
                     </p>
                     <p class="lead">
-                        Here, we report the observation of a generalized AHC in twisted bilayer-trilayer graphene (t2+3) whose formation is seeded by the moir&eacute; potential. The crystal quadruples the moir&eacute; unit-cell area, coinciding with an integer quantum anomalous Hall effect. Recent theories have predicted the generalized AHC to act as a parent state of the fractional quantum anomalous Hall effect, pointing to t2+3 as a promising platform in the search for new correlated and topological phenomena.
+                        Here, we report the observation of a generalized AHC in twisted bilayer-trilayer graphene (t2+3)
+                        whose formation is seeded by the moir&eacute; potential. The crystal quadruples the moir&eacute;
+                        unit-cell area, coinciding with an integer quantum anomalous Hall effect. Recent theories have
+                        predicted the generalized AHC to act as a parent state of the fractional quantum anomalous Hall
+                        effect, pointing to t2+3 as a promising platform in the search for new correlated and
+                        topological phenomena.
                     </p>
-                    <h4><a href="https://arxiv.org/abs/2406.17766" target="_blank" rel="noopener">Su, R., Waters, D. <i>et al. arXiv:2406.17766</i> (2024)</a>
+                    <h4><a href="https://arxiv.org/abs/2406.17766" target="_blank" rel="noopener">Su, R., Waters, D.
+                            <i>et al. arXiv:2406.17766</i> (2024)</a>
                     </h4>
                 </div>
                 <div class="col-lg-6 col-sm-pull-6  col-sm-6">
@@ -285,14 +275,14 @@
 
                 <div class="col-lg-6 col-sm-6">
                     <div class="clearfix"></div>
-                    <h3 class="section-heading">Topological flat bands in the Bernal-stacked t<i>M</i>+<i>N</i>
-                        graphene family
+                    <h3 class="section-heading">Topological flat bands in the Bernal-stacked tM+N graphene family
                     </h3>
                     <p class="lead">
                         Moir&eacute; materials host a wealth of correlated and topological states of matter arising from
                         flat electronic bands with nontrivial quantum geometry.
                     </p>
-                    <p class="lead">Here, we studied the family of twisted graphene multilayers made of twisted sheets of <i>M</i>-
+                    <p class="lead">Here, we studied the family of twisted graphene multilayers made of twisted sheets
+                        of <i>M</i>-
                         and <i>N</i>-layer Bernal-stacked graphene flakes. Our results show that this family of
                         structures
                         is promising for discovering of new topological electronic phenomena, enabled
@@ -300,7 +290,7 @@
                         screening environment.
                     </p>
                     <h4><a href="https://arxiv.org/abs/2405.05913" target="_blank" rel="noopener">Waters, D., Su, R.,
-                        Thompson, E. <i>et al. arXiv:2405.05913</i> (2024)</a>
+                            Thompson, E. <i>et al. arXiv:2405.05913</i> (2024)</a>
                     </h4>
                 </div>
                 <div class="col-lg-6 col-sm-6">
@@ -316,9 +306,11 @@
 
                 <div class="col-lg-6 col-lg-offset-0 col-sm-push-6  col-sm-6">
                     <div class="clearfix"></div>
-                    <h3 class="section-heading"> Superconductivity in twisted double bilayer graphene on WSe<sub>2</sub></h3>
+                    <h3 class="section-heading"> Superconductivity in twisted double bilayer graphene on WSe<sub>2</sub>
+                    </h3>
                     <h5>
-                        Featured in: <a href="https://doi.org/10.1038/s41563-023-01685-z" target="_blank" rel="noopener">News & Views, Nature Materials</a>
+                        Featured in: <a href="https://doi.org/10.1038/s41563-023-01685-z" target="_blank"
+                            rel="noopener">News & Views, Nature Materials</a>
                     </h5>
                     <p class="lead">
                         In a superconductor, electrons form a macroscopic quantum ground state, allowing
@@ -332,8 +324,8 @@
                         superconductivity.
                     </p>
                     <h4><a href="https://doi.org/10.1038/s41563-023-01653-7" target="_blank" rel="noopener">Su, R. <i>et
-                        al. Nat.
-                    Mater. </i> 22, 1332-1337 (2023)</a>
+                                al. Nat.
+                                Mater. </i> 22, 1332-1337 (2023)</a>
                     </h4>
                 </div>
                 <div class="col-lg-6 col-sm-pull-6  col-sm-6">
@@ -342,8 +334,6 @@
             </div>
         </div>
     </div>
-
-
 
     <a name="Other Projects"></a>
     <div class="content-section-a">
@@ -372,6 +362,7 @@
 
         </div>
     </div>
+
     <div class="content-section-b">
         <div class="container">
             <div class="row">
@@ -382,7 +373,8 @@
                         plastic holders, it's big enough to hold a tablet, built to last, and <b>heavy</b>.</p>
 
                     <p class="lead">This was a project to become a qualified user of UBC's student machine
-                            shop. It involved using the mill, lathe, drill press, water jet, as well as hand tools such as the tap and die.</p>
+                        shop. It involved using the mill, lathe, drill press, water jet, as well as hand tools such as
+                        the tap and die.</p>
                 </div>
                 <div class="col-lg-5 col-lg-pull-7 col-sm-6 col-sm-pull-6">
                     <img class="img-responsive" src="img/phone_holder.png" alt="" width="300" height="300">
@@ -401,7 +393,7 @@
         }
 
         .table th {
-            width: 150px;
+            width: 2rem;
             /* Adjust the width of the date column as needed */
             white-space: nowrap;
             /* Prevent line breaks within the date column */
@@ -420,23 +412,28 @@
                 <div class="col-lg-12">
                     <h3 class="section-heading" style="margin-top:-1.5rem; ">News 🥂</h3>
                     <div class="table-responsive">
-                        <table class="table table-sm table-borderless" style="font-weight: 400;">
+                        <table class="table table-sm table-borderless">
                             <tr>
-                                <th scope="row">June 25, 2024</th>
+                                <th scope="row">2024</th>
+                                <td style="white-space: nowrap; text-align: right;">June 25</td>
                                 <td>
-                                    Our preprint on "Generalized anomalous Hall crystals in twisted bilayer-trilayer graphene" is now on <a href="https://arxiv.org/abs/2406.17766" target="_blank"
+                                    Our preprint on "Generalized anomalous Hall crystals in twisted bilayer-trilayer
+                                    graphene" is now on <a href="https://arxiv.org/abs/2406.17766" target="_blank"
                                         rel="noopener">arXiv</a>!
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">May 29, 2024</th>
+                                <th scope="row"></th>
+                                <td style="white-space: nowrap; text-align: right;">May 29</td>
                                 <td>
-                                    I graduated from UBC with a Bachelor of Applied Science in <a href = "https://www.engphys.ubc.ca/" target="_blank"
-                                    rel="noopener">Engineering Physics</a>!  
+                                    I graduated from UBC with a Bachelor of Applied Science in <a
+                                        href="https://www.engphys.ubc.ca/" target="_blank" rel="noopener">Engineering
+                                        Physics</a>!
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">May 10, 2024</th>
+                                <th scope="row"></th>
+                                <td style="white-space: nowrap; text-align: right;">May 10</td>
                                 <td>
                                     Our work on "Topological flat bands in a family of multilayer graphene moir&eacute
                                     lattices" is now on <a href="https://arxiv.org/abs/2405.05913" target="_blank"
@@ -444,7 +441,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">Mar 5, 2024</th>
+                                <th scope="row"></th>
+                                <td style="white-space: nowrap; text-align: right;">March 5</td>
                                 <td>
                                     APS March meeting is in Minneapolis, Minnesota, this year! I reported on a possible
                                     observation of a Josephson-like effect in an orbital ferromagnet.
@@ -458,7 +456,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">Sep 29, 2023</th>
+                                <th scope="row">2023</th>
+                                <td style="white-space: nowrap; text-align: right;">Sept. 29</td>
                                 <td>
                                     I won first prize in the poster session at SBQMI’s International Scientific Advisory
                                     Board meeting! (Check it out: <a href="img/poster_ISAB2023.png" target="_blank"
@@ -467,7 +466,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">Aug 28, 2023</th>
+                                <th scope="row"></th>
+                                <td style="white-space: nowrap; text-align: right;">Aug. 28</td>
                                 <td>
                                     Exciting news! Our superconductivity work was recently published in <a
                                         href="https://www.nature.com/articles/s41563-023-01653-7" target="_blank"
@@ -475,7 +475,8 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">May 12, 2023</th>
+                                <th scope="row"></th>
+                                <td style="white-space: nowrap; text-align: right;">May 12</td>
                                 <td>
                                     I attended the <a href="https://cifar.ca/research-programs/quantum-materials/"
                                         target="_blank" rel="noopener">CIFAR Quantum Materials</a> spring
@@ -487,35 +488,32 @@
                                 </td>
                             </tr>
                             <tr>
-                                <th scope="row">Mar 7, 2023</th>
+                                <th scope="row"></th>
+                                <td style="white-space: nowrap; text-align: right;">March 7</td>
                                 <td>
                                     I gave a talk at the APS March meeting in Las Vegas, Nevada, reporting
-                                    our discovery of superconductivity in twisted double bilayer graphene! (Abstract: <a href="https://meetings.aps.org/Meeting/MAR23/Session/K44.11"
-                                        target="_blank" rel="noopener">Here</a>)
+                                    our discovery of superconductivity in twisted double bilayer graphene! (Abstract: <a
+                                        href="https://meetings.aps.org/Meeting/MAR23/Session/K44.11" target="_blank"
+                                        rel="noopener">Here</a>)
                                 </td>
                             </tr>
                         </table>
                     </div>
                 </div>
-                <!-- <div class="col-lg-12 col-sm-12 bottombanner">
-                    <span class="bannerh5"><h6>Content displayed on this page are the original work of Ruiheng Su. Non-commercial use of any image is permitted as long as proper credit is given. Commercial use of any image on this website is not permitted without prior written consent from Ruiheng Su.</h6></span>
-                </div> -->
             </div>
-
         </div>
         <!-- /.container -->
     </div>
 
-    <!-- <a  name="contact"></a> -->
     <div class="banner">
         <div class="container">
-
             <div class="row">
-
+                <div class="col-lg-12">
+                    <h5>Commercial use of any image on this website is not permitted without prior written consent from
+                        Ruiheng Su.</h5>
+                </div>
             </div>
         </div>
-
     </div>
 </body>
-
 </html>

@@ -25,6 +25,48 @@
 	font-stretch: normal;
 }
 
+
+@font-face {
+	font-family: 'GT America Standard Bold';
+	src:
+		url('../fonts/theme/GT-America-Standard-Bold.woff2') format('woff2'),
+		url('../fonts/theme/GT-America-Standard-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'GT America Standard Medium';
+	src:
+		url('../fonts/theme/GT-America-Standard-Medium.woff2') format('woff2'),
+		url('../fonts/theme/GT-America-Standard-Medium.woff') format('woff');
+	font-weight: 600;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'GT America Standard Regular';
+	src:
+		url('../fonts/theme/GT-America-Standard-Regular.woff2') format('woff2'),
+		url('../fonts/theme/GT-America-Standard-Regular.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+	font-stretch: normal;
+}
+
+@font-face {
+	font-family: 'GT America Standard Regular';
+	src:
+		url('../fonts/theme/GT-America-Standard-Regular-Italic.woff2') format('woff2'),
+		url('../fonts/theme/GT-America-Standard-Regular-Italic.woff') format('woff');
+	font-weight: 300;
+	font-style: italic;
+	font-stretch: normal;
+}
+
+
 body,
 html {
     width: 100%;
@@ -49,19 +91,17 @@ h3 {
 
 
 body,
-h1,
-h2,
-h3,
 h4,
 h5,
 h6 {
-    font-family: "Roboto","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: "GT America Standard Regular","Roboto","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+h1,
+h2,
 h3 {
     font-family:  "Canela Deck Web", "Roboto","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-weight: 500;
 }
 
 p{
@@ -70,7 +110,7 @@ p{
 }
 
 #Name {
-    font-size: 20px; 
+    font-size: 2rem; 
 }
 
 .topnav {
@@ -154,16 +194,17 @@ p{
 }
 
 .banner {
-    padding: 80px 0;
+    padding: 100px 0;
     color: #f8f8f8;
     background: url(../img/medicine_lake_2018.jpg) no-repeat center center;
     background-size: cover;
 }
 
-.banner h3 {
+.banner h5 {
     margin: 0;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 24pt;
+    font-size: 10pt;
+    text-align: center;
 }
 
 .banner ul {
@@ -175,7 +216,7 @@ p{
     margin-top: 0;
 }
 
-.bannerh3{
+.bannerh5{
     float:right;
 }
 
@@ -188,10 +229,10 @@ p{
 }
 
 @media(max-width:767px) {
-    .banner h3 {
+    .banner h5 {
         margin: 0;
         text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-        font-size: 30pt;
+        font-size: 10pt;
     }
 
     .network-name{
