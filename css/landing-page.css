@@ -1,9 +1,10 @@
 /*
- * Start Bootstrap - Landing Page (http://startbootstrap.com/)
- * Copyright 2013-2016 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ * Landing Page - Custom CSS
+ * Redesigned with Harvard-inspired layout principles:
+ * generous whitespace, scroll animations, clean sections
  */
 
+/* ===== Font Faces ===== */
 
 @font-face {
 	font-family: "Canela Web";
@@ -24,7 +25,6 @@
 	font-style: normal;
 	font-stretch: normal;
 }
-
 
 @font-face {
 	font-family: 'GT America Standard Bold';
@@ -66,195 +66,458 @@
 	font-stretch: normal;
 }
 
+/* ===== Base ===== */
 
-body,
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 html {
+    scroll-behavior: smooth;
+}
+
+body, html {
     width: 100%;
     height: 100%;
 }
 
-/* body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: "Canela Deck Web", "Roboto","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+body {
+    padding-top: 60px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #1a1a1a;
+    line-height: 1.7;
 }
 
-h3 {
-    font-family: "Canela Deck Web", "Roboto","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-} */
-
-
-body,
-h4,
-h5,
-h6 {
-    font-family: "GT America Standard Regular","Roboto","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+body, h4, h5, h6 {
+    font-family: "GT America Standard Regular", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-h1,
-h2,
-h3 {
-    font-family:  "Canela Deck Web", "Roboto","Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+h1, h2, h3 {
+    font-family: "Canela Deck Web", "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 500;
+    line-height: 1.25;
 }
 
-p{
+h2 {
+    font-size: 2rem;
+}
+
+h3.section-heading {
+    font-size: 1.75rem;
+    margin-bottom: 24px;
+    position: relative;
+}
+
+p {
     font-size: 12pt;
     font-weight: 400;
 }
 
-#Name {
-    font-size: 1.8rem; 
+a {
+    color: #1a1a1a;
+    text-decoration: underline;
+    text-decoration-color: rgba(26, 26, 26, 0.3);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 0.2s ease, color 0.2s ease;
+}
+
+a:hover, a:focus {
+    color: #333;
+    text-decoration-color: #1a1a1a;
+}
+
+/* ===== Navigation ===== */
+
+.navbar-default {
+    background-color: #fff;
+    border-bottom: 1px solid #e8e8e8;
+    box-shadow: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.navbar-default.scrolled {
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06);
+}
+
+.navbar-fixed-top {
+    z-index: 1030;
 }
 
 .topnav {
-    font-size: 15px; 
+    font-size: 15px;
 }
 
-.lead {
-    font-size: 17px;
+#Name {
+    font-family: "Canela Deck Web", serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #1a1a1a !important;
+    letter-spacing: -0.01em;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #555;
     font-weight: 400;
+    padding: 15px 18px;
+    transition: color 0.2s ease;
+    text-decoration: none;
 }
 
-.intro-header {
-    padding-top: 0px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
-    padding-bottom: 0px;
+.navbar-default .navbar-nav > li > a:hover {
+    color: #1a1a1a;
 }
 
-.intro-message {
+.navbar-brand.social {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.navbar-brand.social a {
+    color: #666;
+    font-size: 1.1rem;
+    padding: 4px 6px;
+    transition: color 0.2s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.navbar-brand.social a:hover {
+    color: #1a1a1a;
+    transform: translateY(-1px);
+}
+
+/* ===== Carousel / Hero ===== */
+
+#myCarousel {
     position: relative;
-    padding-top: 48%;
-    padding-bottom: 0%;
-    color: #f8f8f8;
-    text-align: center;
+    overflow: hidden;
 }
 
-.intro-message > h1 {
-    margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 5em;
+.carousel-inner img {
+    width: 100%;
+    margin: auto;
+    object-fit: cover;
+    min-height: 400px;
+    max-height: 75vh;
 }
 
-.intro-divider {
-    width: 400px;
-    border-top: 0px solid #f8f8f8;
-    border-bottom: 1px solid rgba(0,0,0,0.2);
+.carousel-caption {
+    bottom: 12%;
+    left: 8%;
+    right: 8%;
+    text-align: left;
+    padding: 0;
 }
 
-.intro-message > h3 {
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+.carousel-caption h1 {
+    font-size: 2.8rem;
+    color: #fff;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
 }
 
-@media(max-width:767px) {
-    .intro-message {
-        padding-top: 63%;
-    }
-
-    .intro-message > h1 {
-        font-size: 3em;
-    }
-
-    .intro-divider {
-        width: 100%;
-    }
+.carousel-caption .lead {
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+    font-size: 1.1rem;
+    max-width: 600px;
 }
 
-.network-name {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 2px;
+.carousel-control {
+    width: 6%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    background-image: none !important;
 }
+
+#myCarousel:hover .carousel-control {
+    opacity: 0.7;
+}
+
+.carousel-control:hover {
+    opacity: 1 !important;
+}
+
+/* Carousel slide transition */
+.carousel-inner > .item {
+    transition: transform 0.8s ease-in-out;
+}
+
+/* Gradient overlay on carousel for text readability */
+.carousel-inner .item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 100%);
+    pointer-events: none;
+}
+
+/* ===== Content Sections ===== */
 
 .content-section-a {
-    padding: 40px 0;
-    background-color: #f8f8f8;
+    padding: 72px 0;
+    background-color: #fafafa;
 }
 
 .content-section-b {
-    padding: 40px 0;
-    border-top: 1px solid #e7e7e7;
-    border-bottom: 1px solid #e7e7e7;
+    padding: 72px 0;
+    border-top: none;
+    border-bottom: none;
+    background-color: #fff;
 }
 
 .section-heading {
     margin-bottom: 30px;
 }
 
-.section-heading-spacer {
-    float: left;
-    width: 200px;
-    border-top: 3px solid #e7e7e7;
+/* ===== About Section ===== */
+
+.about-section .img-responsive {
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
+.about-section .img-responsive:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Research Highlights ===== */
+
+.research-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.research-row .img-responsive {
+    border-radius: 6px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.research-row .img-responsive:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== Lead Text ===== */
+
+.lead {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.75;
+    color: #333;
+}
+
+/* ===== News Section ===== */
+
+.news-section .table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.news-section .table td,
+.news-section .table th {
+    padding: 14px 16px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+}
+
+.news-section .table tr:last-child td,
+.news-section .table tr:last-child th {
+    border-bottom: none;
+}
+
+.news-section .table th {
+    width: 2rem;
+    white-space: nowrap;
+    color: #888;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.news-section .table tr {
+    transition: background-color 0.2s ease;
+}
+
+.news-section .table tr:hover {
+    background-color: rgba(0, 0, 0, 0.015);
+}
+
+/* ===== CV Page Tables ===== */
+
+.cv-section .table td,
+.cv-section .table th {
+    padding: 14px 16px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+}
+
+.cv-section .table tr:last-child td,
+.cv-section .table tr:last-child th {
+    border-bottom: none;
+}
+
+.cv-section .table th {
+    width: 2rem;
+    white-space: nowrap;
+    text-align: right;
+    color: #888;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.cv-section h3.section-heading {
+    margin-top: 36px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #1a1a1a;
+    display: inline-block;
+}
+
+.cv-section h3.section-heading:first-of-type {
+    margin-top: 0;
+}
+
+/* ===== Scroll Animation ===== */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger children */
+.fade-in-group > .fade-in:nth-child(2) { transition-delay: 0.1s; }
+.fade-in-group > .fade-in:nth-child(3) { transition-delay: 0.2s; }
+.fade-in-group > .fade-in:nth-child(4) { transition-delay: 0.3s; }
+
+/* ===== Footer / Banner ===== */
+
 .banner {
-    padding: 100px 0;
+    padding: 60px 0;
     color: #f8f8f8;
     background: url(../img/medicine_lake_2018.jpg) no-repeat center center;
     background-size: cover;
+    position: relative;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.banner .container {
+    position: relative;
+    z-index: 1;
 }
 
 .banner h5 {
     margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     font-size: 10pt;
     text-align: center;
+    font-weight: 300;
+    letter-spacing: 0.02em;
 }
 
-.banner ul {
-    margin-bottom: 0;
+/* ===== Publication Logos ===== */
+
+.pub-logo {
+    width: 110px;
+    height: auto;
+    opacity: 0.85;
+    transition: opacity 0.3s ease;
 }
 
-.banner-social-buttons {
-    float: right;
-    margin-top: 0;
+.pub-logo:hover {
+    opacity: 1;
 }
 
-.bannerh5{
-    float:right;
+/* ===== Profile Image (Rounded) ===== */
+
+.rounded-circle {
+    border-radius: 50% !important;
 }
 
+/* ===== Responsive ===== */
 
-@media(max-width:1199px) {
-    ul.banner-social-buttons {
-        float: left;
-        margin-top: 15px;
+@media (max-width: 991px) {
+    .research-row {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .content-section-a,
+    .content-section-b {
+        padding: 48px 0;
     }
 }
 
-@media(max-width:767px) {
-    .banner h5 {
-        margin: 0;
-        text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-        font-size: 10pt;
-    }
-
-    .network-name{
-        font-size: 15pt;
-    }
-
-    ul.banner-social-buttons > li {
-        margin-bottom: 20px;
-        padding: 0;
-    }
-
-    ul.banner-social-buttons > li:last-child {
-        margin-bottom: 0;
-    }
-
+@media (max-width: 767px) {
     body {
-        padding-top: 0px;
+        padding-top: 50px;
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.6rem;
+    }
+
+    .carousel-caption .lead {
+        font-size: 0.95rem;
+    }
+
+    .carousel-inner img {
+        min-height: 280px;
+    }
+
+    .content-section-a,
+    .content-section-b {
+        padding: 36px 0;
+    }
+
+    h3.section-heading {
+        font-size: 1.4rem;
+    }
+
+    .banner {
+        padding: 40px 0;
     }
 }
 
-body {
-  padding-top: 50px;
+@media (max-width: 480px) {
+    .carousel-caption {
+        bottom: 8%;
+        left: 5%;
+        right: 5%;
+    }
+
+    .carousel-caption h1 {
+        font-size: 1.3rem;
+    }
+}
+
+/* ===== Misc ===== */
+
+.black-text {
+    color: #1a1a1a !important;
+}
+
+.intro-header {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 footer {
@@ -262,52 +525,6 @@ footer {
     background-color: #f8f8f8;
 }
 
-.carousel-inner img {
-      width: 100%; /* Set width to 100% */
-      margin: auto;
-}
-.carousel-caption h3 {
-    color: #fff !important;
-}
-
-@media (max-width: 600px) {
-.carousel-caption {
-    /* display: none;  */
-    /* Hide the carousel text when the screen is less than 600 pixels wide */
-}
-.banner h3 {
-    margin: 0;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
-    font-size: 24pt;
-}
-
-.network-name{
-    font-size: 12pt;
-}
-}
-
 p.copyright {
     margin: 15px 0 0;
-}
-
-.portfolio-3-col {
-    
-}
-
-.portfolio-item {
-    margin-bottom: 25px;
-}
-
-.image-bottom-padding{
-    padding-bottom: 20px;
-}
-
-.feature {
-    font-size: 12pt;
-}
-
-.bottombanner{
-    float: none;
-    display: table-cell;
-    vertical-align: bottom;
 }
