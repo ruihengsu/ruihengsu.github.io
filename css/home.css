@@ -1,0 +1,677 @@
+@font-face {
+  font-family: "GT America";
+  src: url("../fonts/theme/GT-America-Standard-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GT America";
+  src: url("../fonts/theme/GT-America-Standard-Medium.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Canela";
+  src: url("../fonts/theme/Canela-Regular-Web.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --ink: #1a1929;
+  --muted: #70727d;
+  --line: #dedfe4;
+  --paper: #ffffff;
+  --header-height: 88px;
+  --wide: min(1180px, calc(100vw - 72px));
+  --reading: min(790px, calc(100vw - 48px));
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "GT America", Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration-color: rgba(26, 25, 41, 0.45);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+a:hover {
+  color: var(--muted);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 5px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  padding: 8px 12px;
+  background: var(--ink);
+  color: white;
+  transform: translateY(-160%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.site-header {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: var(--header-height);
+  padding: 0 34px;
+  background: var(--paper);
+}
+
+.home-page .site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.site-name {
+  display: inline-flex;
+  align-items: center;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 0.9;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.primary-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(28px, 4vw, 54px);
+}
+
+.primary-nav a {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.primary-nav a[aria-current="page"] {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+/* Landing page */
+.slideshow-home {
+  min-height: 0;
+  padding-top: var(--header-height);
+}
+
+.slideshow-hero {
+  position: relative;
+  height: clamp(400px, 58svh, 620px);
+  min-height: 0;
+  overflow: hidden;
+  background: #08080b;
+  color: white;
+}
+
+.home-profile {
+  width: var(--wide);
+  margin: 0 auto;
+  padding: 40px 0 64px;
+}
+
+.home-profile .profile-block {
+  margin: 0;
+}
+
+.slideshow-stage,
+.slideshow-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slideshow-stage {
+  overflow: hidden;
+  background: #08080b;
+}
+
+.slideshow-image {
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
+  transition: opacity 1.25s ease-in-out;
+  user-select: none;
+}
+
+.slideshow-next {
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.slideshow-next.is-visible {
+  opacity: 1;
+}
+
+.slide-caption {
+  position: absolute;
+  z-index: 7;
+  left: 34px;
+  bottom: 31px;
+  max-width: min(620px, calc(100vw - 130px));
+  padding: 17px 21px 18px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--ink);
+}
+
+.page-index,
+.item-number {
+  margin: 0 0 7px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.slide-title {
+  margin: 0;
+  color: var(--ink);
+  font-family: "Canela", Georgia, serif;
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 400;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+}
+
+.slide-caption h1 {
+  margin: 6px 0 0;
+  font-family: "GT America", Arial, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.slide-count {
+  position: absolute;
+  z-index: 7;
+  right: 34px;
+  bottom: 31px;
+  margin: 0;
+  padding: 7px 10px;
+  background: rgba(255,255,255,0.94);
+  color: var(--ink);
+  font-size: 13px;
+  letter-spacing: 0.12em;
+}
+
+/* Interior pages */
+.content-page {
+  width: var(--wide);
+  margin: 0 auto;
+  padding: 64px 0 128px;
+}
+
+.research-page {
+  padding-top: 24px;
+  padding-bottom: 104px;
+}
+
+.research-highlight {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
+  gap: clamp(44px, 6vw, 86px);
+  align-items: center;
+  padding: 60px 0;
+  border-top: 1px solid var(--line);
+}
+
+.research-highlight:first-of-type {
+  border-top: 0;
+  padding-top: 20px;
+}
+
+.research-highlight:nth-of-type(even) .research-figure {
+  order: 2;
+}
+
+.research-highlight:nth-of-type(even) .research-text {
+  order: 1;
+}
+
+.research-figure {
+  margin: 0;
+}
+
+.research-figure img {
+  width: 100%;
+  height: auto;
+  filter: none;
+}
+
+.research-text h2 {
+  margin: 10px 0 24px;
+  font-family: "Canela", Georgia, serif;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.cv-section h2,
+.profile-details h2 {
+  margin: 10px 0 24px;
+  font-family: "Canela", Georgia, serif;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.research-text p:not(.item-number) {
+  margin: 0 0 18px;
+}
+
+.paper-link {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.news-section {
+  padding-top: 80px;
+  border-top: 1px solid var(--ink);
+}
+
+.news-heading {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 40px;
+  align-items: start;
+  margin-bottom: 46px;
+}
+
+.news-heading .page-index {
+  padding-top: 13px;
+}
+
+.news-heading h2 {
+  margin: 0;
+  font-family: "Canela", Georgia, serif;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+
+.news-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.news-list li {
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 40px;
+  padding: 23px 0 26px;
+  border-bottom: 1px solid var(--line);
+}
+
+.news-list time {
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+.news-list p {
+  max-width: 800px;
+  margin: 0;
+}
+
+.news-list a {
+  font-weight: 600;
+}
+
+/* CV inspired by the Virtual Atoms Team page */
+.content-page.cv-page {
+  width: var(--wide);
+  padding-top: 24px;
+  padding-bottom: 104px;
+}
+
+.cv-section:first-of-type {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.profile-block {
+  display: grid;
+  grid-template-columns: 176px minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
+  margin: 0 0 64px;
+}
+
+.profile-portrait {
+  margin: 8px 0 0;
+}
+
+.profile-portrait img {
+  width: 176px;
+  height: 176px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: none;
+}
+
+.profile-details h2 {
+  margin: 0 0 2px;
+  font-size: 30px;
+}
+
+.profile-role {
+  margin: 0;
+  font-size: 17px;
+}
+
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 15px;
+  margin: 13px 0 22px;
+  font-weight: 600;
+}
+
+.profile-details p {
+  margin: 0 0 17px;
+}
+
+.cv-section {
+  padding: 38px 0 46px;
+  border-top: 1px solid var(--line);
+}
+
+.cv-section h2 {
+  margin-top: 0;
+  font-size: 37px;
+}
+
+.resume-list {
+  margin: 0;
+}
+
+.resume-list > div {
+  display: grid;
+  grid-template-columns: 135px minmax(0, 1fr);
+  gap: 24px;
+  padding: 15px 0;
+}
+
+.resume-list dt {
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.03em;
+}
+
+.resume-list dd {
+  margin: 0;
+}
+
+.publication-list,
+.talk-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.publication-list li {
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr) 84px;
+  gap: 18px;
+  align-items: start;
+  padding: 20px 0;
+}
+
+.publication-list .number {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.publication-list p {
+  margin: 0;
+}
+
+.publication-list img {
+  width: 84px;
+  max-height: 84px;
+  object-fit: contain;
+  filter: none;
+}
+
+.talk-list {
+  counter-reset: cv-item;
+}
+
+.talk-list li {
+  position: relative;
+  padding: 14px 0 14px 42px;
+  counter-increment: cv-item;
+}
+
+.talk-list li::before {
+  content: counter(cv-item, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 17px;
+  color: var(--muted);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+.site-footer {
+  display: grid;
+  grid-template-columns: auto minmax(280px, 1fr) auto;
+  align-items: start;
+  gap: 30px;
+  min-height: 180px;
+  padding: 46px max(34px, calc((100vw - 1180px) / 2));
+  background:
+    linear-gradient(rgba(15, 18, 25, 0.48), rgba(15, 18, 25, 0.58)),
+    url("../img/medicine_lake_2018.jpg") center 58% / cover no-repeat;
+  color: white;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.72);
+}
+
+.image-notice {
+  justify-self: center;
+  max-width: 620px;
+  color: rgba(255,255,255,0.66);
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  :root {
+    --wide: min(100% - 40px, 680px);
+    --reading: min(100% - 40px, 680px);
+    --header-height: 78px;
+  }
+
+  .site-header {
+    height: var(--header-height);
+    padding: 0 20px;
+  }
+
+  .primary-nav {
+    gap: 24px;
+  }
+
+  .slideshow-hero {
+    height: clamp(360px, 55svh, 500px);
+    min-height: 0;
+  }
+
+  .home-profile {
+    padding: 36px 0 56px;
+  }
+
+  .slide-caption {
+    left: 20px;
+    bottom: 20px;
+    max-width: calc(100vw - 40px);
+  }
+
+  .slide-count {
+    top: 20px;
+    right: 20px;
+    bottom: auto;
+  }
+
+  .content-page {
+    padding-top: 46px;
+  }
+
+  .news-heading,
+  .news-list li {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .news-heading {
+    margin-bottom: 32px;
+  }
+
+  .news-heading .page-index {
+    padding-top: 0;
+  }
+
+  .research-highlight {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 58px 0;
+  }
+
+  .research-highlight:nth-of-type(even) .research-figure,
+  .research-highlight:nth-of-type(even) .research-text {
+    order: initial;
+  }
+
+  .site-footer {
+    grid-template-columns: 1fr;
+    min-height: 210px;
+    padding: 36px 20px;
+  }
+
+  .image-notice {
+    justify-self: start;
+    text-align: left;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    font-size: 16px;
+  }
+
+  .slideshow-image {
+    object-position: center;
+  }
+
+  .slideshow-hero {
+    height: clamp(320px, 52svh, 440px);
+  }
+
+  .home-profile {
+    padding: 28px 0 48px;
+  }
+
+  .slide-caption {
+    padding: 14px 16px 15px;
+  }
+
+  .slide-caption h1 {
+    font-size: 17px;
+  }
+
+  .profile-block {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .profile-portrait img {
+    width: 128px;
+    height: 128px;
+  }
+
+  .profile-details h2 {
+    font-size: 27px;
+  }
+
+  .profile-role {
+    font-size: 15px;
+  }
+
+  .resume-list > div {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+
+  .publication-list li {
+    grid-template-columns: 26px minmax(0, 1fr);
+  }
+
+  .publication-list img {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .slideshow-image {
+    transition: none;
+  }
+}
