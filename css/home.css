@@ -27,7 +27,7 @@
   --muted: #70727d;
   --line: #dedfe4;
   --paper: #ffffff;
-  --header-height: 88px;
+  --header-height: 56px;
   --wide: min(1180px, calc(100vw - 72px));
   --reading: min(790px, calc(100vw - 48px));
 }
@@ -96,7 +96,7 @@ a:focus-visible {
   justify-content: space-between;
   width: 100%;
   height: var(--header-height);
-  padding: 0 34px;
+  padding: 0 20px;
   background: var(--paper);
 }
 
@@ -110,23 +110,28 @@ a:focus-visible {
   display: inline-flex;
   align-items: center;
   color: var(--ink);
+  font-family: "GT America", Arial, sans-serif;
   font-size: 15px;
   font-weight: 600;
-  line-height: 0.9;
-  letter-spacing: 0.04em;
+  line-height: 1;
+  letter-spacing: normal;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .primary-nav {
   display: flex;
   align-items: center;
-  gap: clamp(28px, 4vw, 54px);
 }
 
 .primary-nav a {
-  font-size: 14px;
-  letter-spacing: 0.08em;
+  font-family: "GT America", Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: normal;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .primary-nav a[aria-current="page"] {
@@ -152,7 +157,7 @@ a:focus-visible {
 .home-profile {
   width: var(--wide);
   margin: 0 auto;
-  padding: 40px 0 64px;
+  padding: 40px 0 48px;
 }
 
 .home-profile .profile-block {
@@ -254,6 +259,10 @@ a:focus-visible {
   padding-bottom: 104px;
 }
 
+.content-page.home-research {
+  padding-top: 0;
+}
+
 .research-highlight {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(340px, 0.85fr);
@@ -261,11 +270,6 @@ a:focus-visible {
   align-items: center;
   padding: 60px 0;
   border-top: 1px solid var(--line);
-}
-
-.research-highlight:first-of-type {
-  border-top: 0;
-  padding-top: 20px;
 }
 
 .research-highlight:nth-of-type(even) .research-figure {
@@ -289,7 +293,7 @@ a:focus-visible {
 .research-text h2 {
   margin: 10px 0 24px;
   font-family: "Canela", Georgia, serif;
-  font-size: clamp(28px, 3vw, 40px);
+  font-size: 30px;
   font-weight: 400;
   line-height: 1.12;
   letter-spacing: -0.025em;
@@ -316,8 +320,8 @@ a:focus-visible {
 }
 
 .news-section {
-  padding-top: 80px;
-  border-top: 1px solid var(--ink);
+  padding-top: 60px;
+  border-top: 1px solid var(--line);
 }
 
 .news-heading {
@@ -325,7 +329,7 @@ a:focus-visible {
   grid-template-columns: 160px minmax(0, 1fr);
   gap: 40px;
   align-items: start;
-  margin-bottom: 46px;
+  margin-bottom: 30px;
 }
 
 .news-heading .page-index {
@@ -335,7 +339,7 @@ a:focus-visible {
 .news-heading h2 {
   margin: 0;
   font-family: "Canela", Georgia, serif;
-  font-size: clamp(28px, 3vw, 40px);
+  font-size: 30px;
   font-weight: 400;
   line-height: 1.12;
   letter-spacing: -0.025em;
@@ -345,15 +349,13 @@ a:focus-visible {
   margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid var(--line);
 }
 
 .news-list li {
   display: grid;
   grid-template-columns: 160px minmax(0, 1fr);
-  gap: 40px;
-  padding: 23px 0 26px;
-  border-bottom: 1px solid var(--line);
+  gap: 24px;
+  padding: 12px 0;
 }
 
 .news-list time {
@@ -366,6 +368,7 @@ a:focus-visible {
 .news-list p {
   max-width: 800px;
   margin: 0;
+  line-height: 1.5;
 }
 
 .news-list a {
@@ -376,7 +379,7 @@ a:focus-visible {
 .content-page.cv-page {
   width: var(--wide);
   padding-top: 24px;
-  padding-bottom: 104px;
+  padding-bottom: 80px;
 }
 
 .cv-section:first-of-type {
@@ -386,7 +389,7 @@ a:focus-visible {
 
 .profile-block {
   display: grid;
-  grid-template-columns: 176px minmax(0, 1fr);
+  grid-template-columns: 251px minmax(0, 1fr);
   gap: 34px;
   align-items: start;
   margin: 0 0 64px;
@@ -397,8 +400,8 @@ a:focus-visible {
 }
 
 .profile-portrait img {
-  width: 176px;
-  height: 176px;
+  width: 251px;
+  height: 251px;
   border-radius: 50%;
   object-fit: cover;
   filter: none;
@@ -427,13 +430,13 @@ a:focus-visible {
 }
 
 .cv-section {
-  padding: 38px 0 46px;
+  padding: 28px 0 32px;
   border-top: 1px solid var(--line);
 }
 
 .cv-section h2 {
-  margin-top: 0;
-  font-size: 37px;
+  margin: 0 0 16px;
+  font-size: 30px;
 }
 
 .resume-list {
@@ -444,7 +447,7 @@ a:focus-visible {
   display: grid;
   grid-template-columns: 135px minmax(0, 1fr);
   gap: 24px;
-  padding: 15px 0;
+  padding: 10px 0;
 }
 
 .resume-list dt {
@@ -469,7 +472,7 @@ a:focus-visible {
   grid-template-columns: 32px minmax(0, 1fr) 84px;
   gap: 18px;
   align-items: start;
-  padding: 20px 0;
+  padding: 14px 0;
 }
 
 .publication-list .number {
@@ -494,7 +497,7 @@ a:focus-visible {
 
 .talk-list li {
   position: relative;
-  padding: 14px 0 14px 42px;
+  padding: 9px 0 9px 42px;
   counter-increment: cv-item;
 }
 
@@ -502,7 +505,7 @@ a:focus-visible {
   content: counter(cv-item, decimal-leading-zero);
   position: absolute;
   left: 0;
-  top: 17px;
+  top: 12px;
   color: var(--muted);
   font-size: 13px;
   letter-spacing: 0.08em;
@@ -535,16 +538,12 @@ a:focus-visible {
   :root {
     --wide: min(100% - 40px, 680px);
     --reading: min(100% - 40px, 680px);
-    --header-height: 78px;
+    --header-height: 54px;
   }
 
   .site-header {
     height: var(--header-height);
-    padding: 0 20px;
-  }
-
-  .primary-nav {
-    gap: 24px;
+    padding: 0 16px;
   }
 
   .slideshow-hero {
@@ -640,12 +639,12 @@ a:focus-visible {
   }
 
   .profile-portrait img {
-    width: 128px;
-    height: 128px;
+    width: 181px;
+    height: 181px;
   }
 
   .profile-details h2 {
-    font-size: 27px;
+    font-size: 30px;
   }
 
   .profile-role {
